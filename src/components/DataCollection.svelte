@@ -3,8 +3,8 @@
   const {data} = $props()
 </script>
 
-<div class="w-60">
-            {#each data as item}
-            <InfoRow {...item} />
-            {/each}
+<div class="w-60 not-last:border-b sm:not-last:border-b-0">
+  {#each data as item}
+  <InfoRow {...item} />
+  {/each}
 </div>
