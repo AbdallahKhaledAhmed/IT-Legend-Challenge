@@ -1,1 +1,9 @@
-<h1>Hello World!</h1>
+<script>
+  import Breadcrumb from "./components/Breadcrumb.svelte";
+  import CourseMaterial from "./components/CourseMaterial.svelte";
+
+</script>
+
+
+<Breadcrumb />
+<CourseMaterial />
