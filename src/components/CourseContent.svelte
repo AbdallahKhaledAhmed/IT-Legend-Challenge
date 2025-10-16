@@ -9,8 +9,8 @@
   </div>
   {#if questions||time}
     <div class="flex flex-wrap justify-end gap-2">
-      <span class="text-sm text-[#60bba9] bg-[#f2faf8] px-2 rounded">{questions||0} QUESTIONS</span>
-      <span class="text-sm text-[#e55762] bg-[#fdf2f4]">{time||0} MINUTES</span>
+      <span class="text-sm text-emerald-800 bg-[#f2faf8] px-2 rounded">{questions||0} QUESTIONS</span>
+      <span class="text-sm text-rose-700 bg-[#fdf2f4]">{time||0} MINUTES</span>
     </div>
   {:else}
     <span class="icon-[icon-park-outline--lock-one]" style="width: 20px; height: 20px; color: #000;"></span>

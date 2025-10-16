@@ -5,3 +5,18 @@
 @plugin "daisyui" {
   themes: light --default, dark;
 }
+
+@layer utilities {
+  .center {
+    @apply flex justify-center items-center;
+  }
+}
+
+@layer components {
+  .progress-after {
+    @apply after:content-[attr(data-width)] after:absolute after:right-0 after:top-2 after:translate-x-[50%];
+  }
+  * {
+    @apply border-[#e5e5e5];
+  }
+}

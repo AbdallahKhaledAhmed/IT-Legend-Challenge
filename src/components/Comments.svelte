@@ -19,5 +19,5 @@
   </div>
 
   <textarea class="textarea w-full shadow-2xl" placeholder="Write a comment"></textarea>
-  <button class="btn text-white bg-[#1ab69d] font-semibold">Submit Review →</button>
+  <button class="btn text-white bg-[#1ab69d] font-semibold w-fit">Submit Review →</button>
 </div>  
