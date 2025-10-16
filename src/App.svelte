@@ -2,6 +2,7 @@
   import Breadcrumb from "./components/Breadcrumb.svelte";
   import Comments from "./components/Comments.svelte";
   import CourseMaterial from "./components/CourseMaterial.svelte";
+  import Leaderboard from "./components/Leaderboard.svelte";
   import PdfViewer from "./components/PdfViewer.svelte";
   import Progress from "./components/Progress.svelte";
   import Quizz from "./components/Quizz.svelte";
@@ -20,3 +21,4 @@
  <PdfViewer path="/CSharp.pdf" />
 
  <Progress  initialValue=80/>
+ <Leaderboard />
