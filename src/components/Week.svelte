@@ -1,19 +1,22 @@
 <script>
 import { MediaQuery } from "svelte/reactivity";
+import CourseContent from "./CourseContent.svelte";
 const small = new MediaQuery("min-width: 640px")
-const {weekNum} = $props()
+const {weekTitle, weekNum, weekContent} = $props()
 </script>
 
 <div class="collapse collapse-plus bg-base-100 border-base-300 border">
-  <input type="checkbox" class="sm:hidden" checked={small.current?true:false} />
-  <div class="collapse-title font-semibold sm:hidden">How do I create an account?</div>
+  <input type="checkbox" id="Collapse" class="sm:hidden" checked={small.current?true:false} />
+  <label for="Collapse" class="collapse-title font-semibold sm:hidden">{weekTitle}</label>
   <div class="collapse-content">
     <div class="border">
       <div class="hidden sm:block">
         <h3 class="text-xl font-semibold">Week {weekNum}</h3>
         <p>Advanced story telling technique for writers: Personas, Characters & Plots</p>
       </div>
-      
+      {#each weekContent as content}
+      <CourseContent {...content}/>
+      {/each}
     </div>
   </div>
 </div>

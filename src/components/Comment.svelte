@@ -2,7 +2,7 @@
   const {name, img, date, commentContent} = $props()
 </script>
 
-<div class="flex items-center justify-start">
+<div class="flex items-center justify-start not-last:border-b">
     <div class="flex flex-wrap p-6 gap-4 justify-between w-fit">
       <div class="avatar">
         <div class="w-24 rounded-full">

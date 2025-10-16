@@ -12,10 +12,12 @@
 
 <div class="flex flex-col gap-4">
   <h2 class="card-title text-3xl">Comments</h2>
-  {#each comments as comment}
-    <Comment {...comment} />
-  {/each}
+  <div>
+    {#each comments as comment}
+      <Comment {...comment} />
+    {/each}
+  </div>
 
-  <textarea class="textarea w-full" placeholder="Write a comment"></textarea>
+  <textarea class="textarea w-full shadow-2xl" placeholder="Write a comment"></textarea>
   <button class="btn text-white bg-[#1ab69d] font-semibold">Submit Review →</button>
 </div>  

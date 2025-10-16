@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@lucide/svelte':
+        specifier: ^0.546.0
+        version: 0.546.0(svelte@5.40.0)
       '@tailwindcss/vite':
         specifier: ^4.1.14
         version: 4.1.14(vite@7.1.10(jiti@2.6.1)(lightningcss@1.30.1))
@@ -15,10 +18,16 @@ importers:
         specifier: ^4.1.14
         version: 4.1.14
     devDependencies:
+      '@iconify-json/formkit':
+        specifier: ^1.2.2
+        version: 1.2.2
       '@iconify-json/game-icons':
         specifier: ^1.2.3
         version: 1.2.3
       '@iconify-json/ic':
+        specifier: ^1.2.4
+        version: 1.2.4
+      '@iconify-json/icon-park-outline':
         specifier: ^1.2.4
         version: 1.2.4
       '@iconify-json/iconamoon':
@@ -27,6 +36,9 @@ importers:
       '@iconify-json/iconoir':
         specifier: ^1.2.9
         version: 1.2.9
+      '@iconify-json/material-symbols-light':
+        specifier: ^1.2.41
+        version: 1.2.41
       '@iconify-json/streamline-freehand':
         specifier: ^1.2.1
         version: 1.2.1
@@ -213,17 +225,26 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@iconify-json/formkit@1.2.2':
+    resolution: {integrity: sha512-vrv5X44zie1F46e1AsPjN2MEi8ui+6SA1EvWETphAbkd+MaXmxyD4vra3hdTOYYNJDn5dkC7vMGf5WieCMu9zA==}
+
   '@iconify-json/game-icons@1.2.3':
     resolution: {integrity: sha512-JnrHQjNI/2nJxlnEAPlU4ta6S44XTX7RJnBUyBV27GbVhJhfwpY9kqzkTqmPs4nyAJaGUjZwOcnBUQ9Dc21nlA==}
 
   '@iconify-json/ic@1.2.4':
     resolution: {integrity: sha512-pzPMmrZrBQuwT7nmtrYdkttun8KalRGgZPIL1Ny9KpF2zjRGIUPN+npTfuD3lrgO/OnSwAoJWuekQwBpt/Cqrw==}
 
+  '@iconify-json/icon-park-outline@1.2.4':
+    resolution: {integrity: sha512-NyZxXe2gD2TbTOyoRRMdtEJhr6i2KQCdDlYYoOn5oZLndQjwpIhw79hzeFhXvP38/o40D3gQ+l+IaSJgbB+0TQ==}
+
   '@iconify-json/iconamoon@1.2.2':
     resolution: {integrity: sha512-Xn7YeSDniPgutPr0qil/iQwQelq975OYQ/i2twGjcK4DjGOXBrBC+6q45WtVuQbFfXzM7bgijv4yVnxy0OqUdQ==}
 
   '@iconify-json/iconoir@1.2.9':
     resolution: {integrity: sha512-TXcx8mnxuZ0Weq104HwXZFPI0mlJzKjoy4nE20B803+Jrt7g2u4uc2iCGyHKpdqXVws3KaMTMDmY4yExy9Z+Qw==}
+
+  '@iconify-json/material-symbols-light@1.2.41':
+    resolution: {integrity: sha512-gDC2CQfxtqUgtFX89/yKjLUa8idShqvab+Fu4TnjlYWq/atg26pA1HqCWGzxKRlx4I/cbat6q8aCBAuBTgOp/Q==}
 
   '@iconify-json/streamline-freehand@1.2.1':
     resolution: {integrity: sha512-3Pq1cEsAtSkilrbCM9KzcVFuET+XD/WhSOOEpOzD2nUq8t3D8XB/klBQ2emu6SYv7FUnszhTrfdinYWaDFQbKw==}
@@ -261,6 +282,11 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
+
+  '@lucide/svelte@0.546.0':
+    resolution: {integrity: sha512-qFVQ+BUJH9Swns7cag3Wik7VqKZfN2hwDZ2VazbZJc8VSqI0kgOZCZ2OVwrvNxdkl8Mw9M9H1ROB0BXh/WH/sA==}
+    peerDependencies:
+      svelte: ^5
 
   '@rollup/rollup-android-arm-eabi@4.52.4':
     resolution: {integrity: sha512-BTm2qKNnWIQ5auf4deoetINJm2JzvihvGb9R6K/ETwKLql/Bb3Eg2H1FBp1gUb4YGbydMA3jcmQTR73q7J+GAA==}
@@ -876,6 +902,10 @@ snapshots:
   '@esbuild/win32-x64@0.25.11':
     optional: true
 
+  '@iconify-json/formkit@1.2.2':
+    dependencies:
+      '@iconify/types': 2.0.0
+
   '@iconify-json/game-icons@1.2.3':
     dependencies:
       '@iconify/types': 2.0.0
@@ -884,11 +914,19 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
+  '@iconify-json/icon-park-outline@1.2.4':
+    dependencies:
+      '@iconify/types': 2.0.0
+
   '@iconify-json/iconamoon@1.2.2':
     dependencies:
       '@iconify/types': 2.0.0
 
   '@iconify-json/iconoir@1.2.9':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/material-symbols-light@1.2.41':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -945,6 +983,10 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
+
+  '@lucide/svelte@0.546.0(svelte@5.40.0)':
+    dependencies:
+      svelte: 5.40.0
 
   '@rollup/rollup-android-arm-eabi@4.52.4':
     optional: true
