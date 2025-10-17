@@ -3,7 +3,7 @@
 </script>
 
 <div class="flex justify-between">
-  <div class="flex items-center">
+  <div class="flex items-center gap-2">
     <span class="icon-[formkit--filedoc]" style="width: 20px; height: 20px;"></span>
     <span>{name}</span>
   </div>

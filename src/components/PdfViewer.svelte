@@ -9,4 +9,3 @@
     <iframe src={path} title="C# PDF" class="w-full h-full pt-5 overflow-auto"></iframe>
   </main>
 </div>
-<label for="my_modal_1" class="btn">open modal</label>

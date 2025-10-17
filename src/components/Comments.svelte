@@ -2,7 +2,7 @@
   import Comment from "./Comment.svelte";
 
   const now = new Date();
-  const date = `${now.getDay()}`
+  const date = now.toLocaleDateString("en-US", {year:"numeric", month:"short", day:"numeric"})
   const comments = [
     {name:"Mohammed", img:"https://img.daisyui.com/images/profile/demo/superperson@192.webp",date:date, commentContent:"I Love ITLegend"},
     {name:"Ali", img:"https://img.daisyui.com/images/profile/demo/batperson@192.webp",date:date, commentContent:"This is the Best Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi laboriosam facilis quibusdam esse unde, pariatur earum maiores cum laudantium eius numquam quis ab officia debitis omnis consequatur dignissimos aliquid neque I have ever seen!"},
@@ -11,7 +11,7 @@
 </script>
 
 <div class="flex flex-col gap-4">
-  <h2 class="card-title text-3xl">Comments</h2>
+  <h2 class="card-title text-3xl" id="Comments">Comments</h2>
   <div>
     {#each comments as comment}
       <Comment {...comment} />
