@@ -2,7 +2,7 @@
  const {name, questions="", time=""} = $props()
 </script>
 
-<div class="flex justify-between border-y">
+<div class="flex justify-between">
   <div class="flex items-center">
     <span class="icon-[formkit--filedoc]" style="width: 20px; height: 20px;"></span>
     <span>{name}</span>

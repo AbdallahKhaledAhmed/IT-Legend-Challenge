@@ -11,7 +11,7 @@
   })
 </script>
  
-  <div class="[&_*]:border-[#bebdbd] progress-bar rounded h-2 w-100 bg-base-300 flex justify-start" role="progressbar">
+  <div class="[&_*]:border-[#bebdbd] progress-bar rounded h-2 w-full bg-base-300 flex justify-start" role="progressbar">
     <div bind:this={progressElement} class="bg-emerald-500 h-full rounded relative progress-after text-xs text-blue-700 duration-1000 ease-out" style:width={value+"%"} data-width="{value}%">
       <div class="center flex-col gap-0.5 absolute right-0 translate-x-[40%] bottom-3">
         <div>
