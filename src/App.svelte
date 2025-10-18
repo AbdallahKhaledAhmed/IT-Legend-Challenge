@@ -11,28 +11,35 @@
   import { week1_4, week5_8 } from "./components/weeks";
   import VideoPlayer from "./components/VideoPlayer.svelte";
   import Ask from "./components/Ask.svelte";
-  import Quizz1 from "./components/Quizz.svelte";
-  import Test from "./components/test.svelte";
 </script>
 
-
-<Breadcrumb />
-<CourseMaterial />
-<Comments />
-<div id="Curriculm">
-  <Week weekTitle="Course Introduction" weekNum="1-4" weekContent={week1_4}/>
-  <Week weekTitle="JavaScript Language Basics" weekNum="5-8" weekContent={week5_8}/>
-  <Week weekTitle="Components & Databinding" weekNum="5-8" weekContent={week5_8}/>
-</div>
-<!-- <Quizz /> -->
 <PdfViewer path="/CSharp.pdf" />
-
-<Progress  initialValue=63/>
-<Leaderboard />
-<Navigation />
-<!-- <VideoPlayer /> -->
-
 <Ask />
-<Quizz1 />
+<Quizz />
+<Leaderboard />
 
-<Test />
+<header class="px-5">
+  <Breadcrumb />
+  <h1>Starting SEO as your Home</h1>
+</header>
+<main class="flex flex-wrap p-5">
+  <div class="w-full sm:w-2/3">
+    <VideoPlayer />
+    <Navigation />
+    <CourseMaterial />
+    <Comments />
+  </div>
+  <div class="w-full sm:w-1/3 flex flex-col p-5 gap-10">
+    <h2>Topics for This Course</h2>
+    <Progress  initialValue=63/>
+    <div id="Curriculm">
+      <Week weekTitle="Course Introduction" weekNum="1-4" weekContent={week1_4}/>
+      <Week weekTitle="JavaScript Language Basics" weekNum="5-8" weekContent={week5_8}/>
+      <Week weekTitle="Components & Databinding" weekNum="5-8" weekContent={week5_8}/>
+    </div>
+  </div>
+</main>
+
+
+
+

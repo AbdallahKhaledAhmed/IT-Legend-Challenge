@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import videojs from 'video.js';
+  import 'video.js/dist/video-js.css';
 
   let {url = "/vid.mp4", thumbnail = "/thumbnail.jpg"} = $props()
   let playing = $state(false)
@@ -8,7 +9,6 @@
   
   onMount(async()=>{
     const player = videojs(videoElement, {controls:true, fluid: true, playbackRates: [0.5, 0.75, 1, 1.25, 1.5, 2]});
-    const Button = videojs.getComponent('Button');
   })
 </script>
 
