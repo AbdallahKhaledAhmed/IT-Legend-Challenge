@@ -14,7 +14,7 @@
 
 
 
-<div class="relative">
+<div class="sticky md:relative z-50 top-0 ">
   <!-- svelte-ignore a11y_media_has_caption -->
   <video src={url} poster={thumbnail} bind:this={videoElement} class="video-js" style:border-radius=var(--radius-lg)></video>
   <button title="Play" id="Play" class="w-full h-full top-0 absolute center rounded bg-black/40" style:display={playing?"none":null} onclick={()=>{playing=true;videoElement.play()}}>

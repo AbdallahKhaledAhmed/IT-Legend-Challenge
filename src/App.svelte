@@ -22,14 +22,14 @@
   <Breadcrumb />
   <h1>Starting SEO as your Home</h1>
 </header>
-<main class="flex flex-wrap p-5">
-  <div class="w-full sm:w-2/3">
+<main class="flex flex-wrap p-2 md:p-5">
+  <div class="w-full md:w-2/3 flex flex-col gap-5 md:pr-5 p-0">
     <VideoPlayer />
     <Navigation />
     <CourseMaterial />
     <Comments />
   </div>
-  <div class="w-full sm:w-1/3 flex flex-col p-5 gap-10">
+  <div class="w-full md:w-1/3 flex flex-col gap-10 pl-5">
     <h2>Topics for This Course</h2>
     <Progress  initialValue=63/>
     <div id="Curriculm">
