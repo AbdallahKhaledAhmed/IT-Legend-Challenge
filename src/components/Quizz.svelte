@@ -1,4 +1,5 @@
 <script>
+  import QuestionContent from "./QuestionContent.svelte";
   import QuestionNums from "./QuestionNums.svelte";
   import Timer from "./Timer.svelte";
 
@@ -43,5 +44,10 @@
     <label for="my_modal_4" class="btn btn-circle w-6 h-6 absolute top-3 right-3 ">X</label>
     <Timer time=10/>
     <QuestionNums {questions} />
+    <div class="flex">
+      {#each questions as question, ind}
+        <QuestionContent question={{...question, ind:ind+1}} />
+      {/each}
+    </div>
   </main>
 </div>

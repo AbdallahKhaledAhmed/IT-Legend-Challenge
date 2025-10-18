@@ -12,6 +12,7 @@
   import VideoPlayer from "./components/VideoPlayer.svelte";
   import Ask from "./components/Ask.svelte";
   import Quizz1 from "./components/Quizz.svelte";
+  import Test from "./components/test.svelte";
 </script>
 
 
@@ -29,7 +30,9 @@
 <Progress  initialValue=63/>
 <Leaderboard />
 <Navigation />
-<VideoPlayer />
+<!-- <VideoPlayer /> -->
 
 <Ask />
 <Quizz1 />
+
+<Test />

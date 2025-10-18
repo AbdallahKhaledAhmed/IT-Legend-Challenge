@@ -11,8 +11,3 @@
   </li>
   {/each}
 </ul>
-<main class="bg-base-200 rounded-3xl center gap-3 flex-col p-10">
-    <div class="w-80 h-20 bg-white"></div>
-    <div class="w-80 h-20 bg-white"></div>
-    <div class="w-80 h-20 bg-white"></div>
-  </main>
