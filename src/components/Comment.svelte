@@ -3,7 +3,7 @@
 </script>
 
 <article class="flex items-center justify-start not-last:border-b">
-  <div class="flex flex-wrap p-6 gap-4 justify-between w-fit">
+  <div class="p-6 gap-4 w-fit self-start">
     <div class="avatar">
       <div class="w-24 rounded-full">
         <img src={img} alt="Student" loading="lazy" />

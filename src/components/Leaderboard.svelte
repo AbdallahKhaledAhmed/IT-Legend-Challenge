@@ -4,7 +4,7 @@
 
 <input type="checkbox" id="my_modal_2" class="modal-toggle" />
 <div class="modal " role="dialog">
-  <div class="modal-box max-w-none w-full h-full rounded-none center flex-col text-blue-700">
+  <div class="modal-box max-w-none w-full h-full rounded-none flex justify-start items-center flex-col gap-5 text-blue-700">
     <label for="my_modal_2" class="btn btn-circle w-6 h-6 absolute top-3 right-3 ">X</label>
     <header class="center flex-col">
       <p>JavaScript Course</p>
@@ -19,6 +19,9 @@
       </blockquote>
     </figure>
     <main class="bg-base-200 rounded-3xl center gap-3 flex-col p-10">
+      <div class="w-80 h-20 bg-white"></div>
+      <div class="w-80 h-20 bg-white"></div>
+      <div class="w-80 h-20 bg-white"></div>
       <div class="w-80 h-20 bg-white"></div>
       <div class="w-80 h-20 bg-white"></div>
       <div class="w-80 h-20 bg-white"></div>
