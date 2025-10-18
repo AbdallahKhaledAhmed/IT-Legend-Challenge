@@ -10,6 +10,8 @@
   import Week from "./components/Week.svelte";
   import { week1_4, week5_8 } from "./components/weeks";
   import VideoPlayer from "./components/VideoPlayer.svelte";
+  import Ask from "./components/Ask.svelte";
+  import Quizz1 from "./components/Quizz.svelte";
 </script>
 
 
@@ -24,7 +26,10 @@
 <!-- <Quizz /> -->
 <PdfViewer path="/CSharp.pdf" />
 
-<Progress  initialValue=80/>
+<Progress  initialValue=63/>
 <Leaderboard />
 <Navigation />
 <VideoPlayer />
+
+<Ask />
+<Quizz1 />

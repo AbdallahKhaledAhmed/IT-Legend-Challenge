@@ -11,8 +11,8 @@
 
 <div class="flex flex-col gap-4">
   <h2 class="card-title text-3xl">Course Materials</h2>
-    <div class="card shadow-2xl max-w-180 w-2/3">
-      <div class="flex flex-col sm:flex-row justify-between items-center p-6 sm:gap-15">
+    <div class="card shadow-2xl">
+      <div class="flex flex-col sm:flex-row justify-around items-center p-6 sm:gap-15">
         <DataCollection {data} />
         <DataCollection {data} />
       </div>

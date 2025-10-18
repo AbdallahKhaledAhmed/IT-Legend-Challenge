@@ -2,7 +2,7 @@
  const {name, questions="", time=""} = $props()
 </script>
 
-<label for={questions?"my_modal_2":time?"my_modal_1":""} class="flex cursor-pointer justify-between border-y py-3">
+<label for={questions?"my_modal_2":time?"my_modal_1":"none"} class="flex cursor-pointer justify-between border-y py-3">
   <div class="flex items-center gap-2">
     <span class="icon-[formkit--filedoc]" style="width: 20px; height: 20px;"></span>
     <span>{name}</span>

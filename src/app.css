@@ -16,6 +16,9 @@
   .progress-after {
     @apply after:content-[attr(data-width)] after:absolute after:right-0 after:top-2 after:translate-x-[50%];
   }
+  .question-num {
+    @apply bg-white text-[#3f55b7];
+  }
   * {
     @apply border-[#e5e5e5];
   }
