@@ -9,9 +9,9 @@
     ]
 </script>
 
-<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-5">
   <h2 class="card-title text-3xl">Course Materials</h2>
-    <div class="card shadow-2xl">
+    <div class="card shadow-xl">
       <div class="flex flex-col sm:flex-row justify-around items-center p-6 sm:gap-15">
         <DataCollection {data} />
         <DataCollection {data} />

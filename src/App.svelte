@@ -11,6 +11,8 @@
   import { week1_4, week5_8 } from "./components/weeks";
   import VideoPlayer from "./components/VideoPlayer.svelte";
   import Ask from "./components/Ask.svelte";
+  import ModalButton from "./components/ModalButton.svelte";
+  let videoLink = $state("/vid.mp4")
 </script>
 
 <PdfViewer path="/CSharp.pdf" />
@@ -18,19 +20,21 @@
 <Quizz />
 <Leaderboard />
 
-<header class="px-5">
+<header class="px-5 py-2 bg-[#f5f9fa]">
   <Breadcrumb />
-  <h1>Starting SEO as your Home</h1>
+  <h1 class="text-4xl font-semibold">Starting SEO as your Home</h1>
 </header>
 <main class="flex flex-wrap p-2 md:p-5">
   <div class="w-full md:w-2/3 flex flex-col gap-5 md:pr-5 p-0">
-    <VideoPlayer />
+    <VideoPlayer url={videoLink} />
+    <!-- <button class="btn" onclick={()=>videoLink="/vid2.mp4"}>Change Vid</button> -->
+    <ModalButton modalId="my_modal_1" btnClass="bg-gray-600"></ModalButton> 
     <Navigation />
     <CourseMaterial />
     <Comments />
   </div>
   <div class="w-full md:w-1/3 flex flex-col gap-10 pl-5">
-    <h2>Topics for This Course</h2>
+    <h2 class="text-2xl font-semibold">Topics for This Course</h2>
     <Progress  initialValue=63/>
     <div id="Curriculm">
       <Week weekTitle="Course Introduction" weekNum="1-4" weekContent={week1_4}/>

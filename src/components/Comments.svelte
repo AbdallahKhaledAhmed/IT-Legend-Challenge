@@ -17,7 +17,7 @@
   }
 </script>
 
-<div class="flex flex-col gap-4">
+<div class="flex flex-col">
   <h2 class="card-title text-3xl" id="Comments">Comments</h2>
   <div>
     {#each comments as comment}
@@ -25,6 +25,6 @@
     {/each}
   </div>
 
-  <textarea class="textarea w-full shadow-2xl" placeholder="Write a comment" bind:value={commentContent}></textarea>
-  <button class="btn text-white bg-[#1ab69d] px-6 font-semibold w-fit disabled:opacity-50" disabled={commentContent.length===0} onclick={addComment}>Submit Review →</button>
+  <textarea class="textarea h-40 w-full shadow-xl" placeholder="Write a comment" bind:value={commentContent}></textarea>
+  <button class="mt-5 md:h-12 btn text-white bg-[#1ab69d] px-6 font-semibold w-fit disabled:opacity-50" disabled={commentContent.length===0} onclick={addComment}>Submit Review →</button>
 </div>  

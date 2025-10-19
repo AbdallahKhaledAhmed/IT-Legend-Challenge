@@ -12,7 +12,7 @@ const {weekTitle, weekNum, weekContent} = $props()
   <div class="collapse-content md:bg-none md:border-0 flex flex-col gap-5 ">
       <div class="hidden md:flex flex-col gap-3">
         <h3 class="text-xl font-semibold">Week {weekNum}</h3>
-        <p>Advanced story telling technique for writers: Personas, Characters & Plots</p>
+        <p class="opacity-65">Advanced story telling technique for writers: Personas, Characters & Plots</p>
       </div>
       <div class="divide-y border-y">
         {#each weekContent as content}
