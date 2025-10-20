@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<input type="checkbox" id="my_modal_2" class="modal-toggle" />
+<input type="checkbox" id="my_modal_2" class="modal-toggle" title="Leaderboard" />
 <div class="modal" role="dialog">
 	<div
 		class="modal-box max-w-none w-full h-full rounded-none flex justify-start items-center flex-col gap-5 text-blue-700"

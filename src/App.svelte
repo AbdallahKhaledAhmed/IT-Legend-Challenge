@@ -74,7 +74,6 @@
 			{/if}
 
 			<div class="{theaterStatus ? 'w-full md:w-2/3' : 'w-full'} flex flex-col gap-5 md:pr-5 p-0">
-				<ModalButton modalId="my_modal_1" btnClass="bg-gray-600"></ModalButton>
 				<Navigation />
 				<CourseMaterial on:startQuizz={() => (isQuizzOpen = true)} />
 				{#if !underMedium.current}

@@ -3,7 +3,7 @@
 	let check = $state(null);
 </script>
 
-<input type="checkbox" bind:this={check} id="my_modal_3" class="modal-toggle" />
+<input type="checkbox" bind:this={check} id="my_modal_3" class="modal-toggle" title="Ask Question" />
 <div class="modal" role="dialog">
 	<main
 		class="modal-box max-w-none w-full h-full rounded-none flex justify-center items-start flex-col gap-4"
