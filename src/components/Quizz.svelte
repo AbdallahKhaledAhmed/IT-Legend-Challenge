@@ -48,7 +48,7 @@
 		<QuestionNums {questions} />
 		<div class="flex">
 			{#each questions as question, ind}
-				<QuestionContent question={{ ...question, ind: ind + 1 }} />
+				<QuestionContent question={{ ...question }} />
 			{/each}
 		</div>
 	</main>

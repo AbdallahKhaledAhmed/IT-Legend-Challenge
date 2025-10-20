@@ -17,6 +17,9 @@ importers:
       video.js:
         specifier: ^8.23.4
         version: 8.23.4
+      videojs-landscape-fullscreen:
+        specifier: ^12.3.0
+        version: 12.3.0(video.js@8.23.4)
     devDependencies:
       '@iconify-json/akar-icons':
         specifier: ^1.2.7
@@ -1073,6 +1076,11 @@ packages:
   videojs-font@4.2.0:
     resolution: {integrity: sha512-YPq+wiKoGy2/M7ccjmlvwi58z2xsykkkfNMyIg4xb7EZQQNwB71hcSsB3o75CqQV7/y5lXkXhI/rsGAS7jfEmQ==}
 
+  videojs-landscape-fullscreen@12.3.0:
+    resolution: {integrity: sha512-4cGcsHvmYVVoELZoY4R80UJHJrMPEvrDqc28FHCMOYNVQV9gFYtb+i1tB8EzsinHTuO09fNU7CwzHsyKqV5LAA==}
+    peerDependencies:
+      video.js: 5.x || 6.x || 7.x || 8.x
+
   videojs-vtt.js@0.15.5:
     resolution: {integrity: sha512-yZbBxvA7QMYn15Lr/ZfhhLPrNpI/RmCSCqgIff57GC2gIrV5YfyzLfLyZMj0NnZSAz8syB4N0nHXpZg9MyrMOQ==}
 
@@ -2022,6 +2030,11 @@ snapshots:
       video.js: 8.23.4
 
   videojs-font@4.2.0: {}
+
+  videojs-landscape-fullscreen@12.3.0(video.js@8.23.4):
+    dependencies:
+      global: 4.4.0
+      video.js: 8.23.4
 
   videojs-vtt.js@0.15.5:
     dependencies:

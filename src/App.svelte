@@ -15,17 +15,21 @@
 	import { setContext } from 'svelte';
 	import { MediaQuery } from 'svelte/reactivity';
 	const underMedium = new MediaQuery('max-width: 768px');
+	const videoData = [
+		{ vidPath: 'vid1(720).mp4', thumbPath: 'thumbnail.webp' },
+		{ vidPath: 'vid2(720).mp4', thumbPath: 'thumbnail2.webp' }
+	];
 
-	let videoData = $state({ vidPath: 'vid1(720).mp4', thumbPath: 'thumbnail.webp' });
+	let videoIndex = $state(0);
 	let quizzTime = $state(-1);
 	let theaterMode = $state(false);
 	let theaterStatus = $derived.by(() => (underMedium.current ? false : theaterMode));
-	setContext('theaterStatus', {
+	setContext('theaterMode', {
 		get status() {
-			return theaterStatus;
+			return theaterMode;
 		},
 		set status(val) {
-			theaterStatus = val;
+			theaterMode = val;
 		}
 	});
 	setContext('quizzTime', {
@@ -36,12 +40,12 @@
 			quizzTime = val;
 		}
 	});
-	setContext('videoData', {
+	setContext('videoIndex', {
 		get data() {
-			return videoData;
+			return videoIndex;
 		},
 		set data(val) {
-			videoData = val;
+			videoIndex = val;
 		}
 	});
 </script>
@@ -56,14 +60,19 @@
 	<h1 class="text-4xl font-semibold">Starting SEO as your Home</h1>
 </header>
 <main class="flex flex-wrap p-2 md:p-5">
+	{#if underMedium.current}
+		{#key videoIndex}
+			<VideoPlayer {...videoData[videoIndex % 2]} />
+		{/key}
+	{/if}
 	<div class={theaterStatus ? 'contents' : 'w-full md:w-2/3'}>
-		<div class="w-full">
-			{#key videoData}
-				<VideoPlayer {...videoData} />
+		{#if !underMedium.current}
+			{#key videoIndex}
+				<VideoPlayer {...videoData[videoIndex % 2]} />
 			{/key}
-		</div>
+		{/if}
 
-		<div class="{theaterStatus ? 'w-full md:w-2/3':'w-full' } flex flex-col gap-5 md:pr-5 p-0">
+		<div class="{theaterStatus ? 'w-full md:w-2/3' : 'w-full'} flex flex-col gap-5 md:pr-5 p-0">
 			<ModalButton modalId="my_modal_1" btnClass="bg-gray-600"></ModalButton>
 			<Navigation />
 			<CourseMaterial />

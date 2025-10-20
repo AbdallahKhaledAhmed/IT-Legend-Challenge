@@ -2,9 +2,9 @@
 	import { getContext } from 'svelte';
 	import ModalButton from './ModalButton.svelte';
 
-	const { name, questions = '', time = '', vidPath = null, thumbPath = null } = $props();
+	const { name, questions = '', time = '', vidind = null } = $props();
 	let quizzTime = getContext('quizzTime');
-	let videoData = getContext('videoData');
+	let videoIndex = getContext('videoIndex');
 </script>
 
 <ModalButton
@@ -13,8 +13,8 @@
 	click={() => {
 		if (quizzTime.time === -1 && time && questions) {
 			quizzTime.time = +time;
-		} else if (vidPath && thumbPath) {
-			videoData.data = { vidPath: vidPath, thumbPath: thumbPath };
+		} else if (vidind !== null) {
+			videoIndex.data = vidind;
 		}
 	}}
 >

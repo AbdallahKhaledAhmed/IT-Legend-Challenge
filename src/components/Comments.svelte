@@ -48,7 +48,7 @@
 	</div>
 
 	<textarea
-		class="textarea h-40 w-full shadow-xl"
+		class="textarea h-40 w-full shadow-xl max-md:resize-none"
 		placeholder="Write a comment"
 		bind:value={commentContent}
 	></textarea>

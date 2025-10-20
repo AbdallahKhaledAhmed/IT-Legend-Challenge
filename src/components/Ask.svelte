@@ -10,7 +10,7 @@
 	>
 		<label for="my_modal_3" class="btn btn-circle w-6 h-6 absolute top-3 right-3">X</label>
 		<textarea
-			class="textarea w-full shadow-2xl h-[50%]"
+			class="textarea w-full shadow-2xl h-[50%] resize-none"
 			placeholder="Write a question"
 			bind:value={questionContent}
 		></textarea>

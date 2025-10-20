@@ -3,7 +3,7 @@
 	import { MediaQuery } from 'svelte/reactivity';
 
 	const underMedium = new MediaQuery('max-width: 768px');
-	let theaterMode = getContext('theaterStatus');
+	let theaterMode = getContext('theaterMode');
 </script>
 
 <button

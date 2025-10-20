@@ -1,12 +1,16 @@
 <script>
-	import { onMount } from 'svelte';
+	import { getContext, onMount } from 'svelte';
 	import videojs from 'video.js';
 	import 'video.js/dist/video-js.css';
+	import LandscapeFullscreen from 'videojs-landscape-fullscreen';
 	import TheaterMode from './TheaterMode.svelte';
+
+	videojs.registerPlugin('landscapeFullscreen', LandscapeFullscreen);
 
 	let { vidPath, thumbPath } = $props();
 	let playing = $state(false);
 	let videoElement = $state(null);
+	let videoIndex = getContext('videoIndex');
 
 	onMount(() => {
 		const player = videojs(videoElement, {
@@ -14,6 +18,19 @@
 			fluid: true,
 			playbackRates: [0.5, 0.75, 1, 1.25, 1.5, 2]
 		});
+		// @ts-ignore
+		player.landscapeFullscreen({
+			fullscreen: {
+				enterOnRotate: true,
+				exitOnRotate: true,
+				alwaysInLandscapeMode: true,
+				iOS: true
+			}
+		});
+		videoElement.addEventListener('ended', () => {
+			videoIndex.data++;
+		});
+
 		return () => {
 			if (player) {
 				player.dispose();
@@ -22,10 +39,10 @@
 	});
 </script>
 
-<div class="sticky md:relative z-50 top-0">
-  {#if playing}
-	<TheaterMode />
-  {/if}
+<div class="sticky w-full md:relative z-50 top-0">
+	{#if playing}
+		<TheaterMode />
+	{/if}
 	<!-- svelte-ignore a11y_media_has_caption -->
 	<video
 		src={vidPath}
