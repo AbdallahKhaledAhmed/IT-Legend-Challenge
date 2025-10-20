@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import videojs from 'video.js';
 	import 'video.js/dist/video-js.css';
+	import TheaterMode from './TheaterMode.svelte';
 
 	let { vidPath, thumbPath } = $props();
 	let playing = $state(false);
@@ -22,6 +23,9 @@
 </script>
 
 <div class="sticky md:relative z-50 top-0">
+  {#if playing}
+	<TheaterMode />
+  {/if}
 	<!-- svelte-ignore a11y_media_has_caption -->
 	<video
 		src={vidPath}

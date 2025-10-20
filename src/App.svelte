@@ -19,7 +19,15 @@
 	let videoData = $state({ vidPath: 'vid1(720).mp4', thumbPath: 'thumbnail.webp' });
 	let quizzTime = $state(-1);
 	let theaterMode = $state(false);
-	let theaterStatus = $derived.by(() => (underMedium.current ? true : theaterMode));
+	let theaterStatus = $derived.by(() => (underMedium.current ? false : theaterMode));
+	setContext('theaterStatus', {
+		get status() {
+			return theaterStatus;
+		},
+		set status(val) {
+			theaterStatus = val;
+		}
+	});
 	setContext('quizzTime', {
 		get time() {
 			return quizzTime;
@@ -48,18 +56,14 @@
 	<h1 class="text-4xl font-semibold">Starting SEO as your Home</h1>
 </header>
 <main class="flex flex-wrap p-2 md:p-5">
-	<div class={theaterStatus ? 'contents' : 'w-2/3'}>
+	<div class={theaterStatus ? 'contents' : 'w-full md:w-2/3'}>
 		<div class="w-full">
 			{#key videoData}
 				<VideoPlayer {...videoData} />
 			{/key}
 		</div>
 
-		<div
-			class="{(theaterStatus && underMedium.current) || !underMedium.current
-				? 'w-full'
-				: 'w-2/3'} flex flex-col gap-5 md:pr-5 p-0"
-		>
+		<div class="{theaterStatus ? 'w-full md:w-2/3':'w-full' } flex flex-col gap-5 md:pr-5 p-0">
 			<ModalButton modalId="my_modal_1" btnClass="bg-gray-600"></ModalButton>
 			<Navigation />
 			<CourseMaterial />
@@ -68,7 +72,7 @@
 			{/if}
 		</div>
 	</div>
-	<div class="w-full md:w-1/3 flex flex-col gap-10 pl-5 pt-2">
+	<div class="w-full md:w-1/3 flex flex-col gap-10 pl-5 pt-10 md:pt-2">
 		<h2 class="text-2xl font-semibold">Topics for This Course</h2>
 		<Progress initialValue="63" />
 		<div id="Curriculm">
