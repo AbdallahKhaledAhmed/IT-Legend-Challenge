@@ -1,17 +1,17 @@
 <script>
-	let selected = $state(0);
-	let { questions } = $props();
+	let { questions, currentQuestion } = $props();
 </script>
 
 <ul class="menu menu-horizontal gap-3 rounded-box text-white font-semibold">
-	{#each questions as question, ind}
+	{#each questions as _, ind}
 		<li>
 			<button
-				class="btn btn-ghost btn-circle border-[#ebebeb] {selected == ind
+				class="btn btn-ghost btn-circle border-[#ebebeb] {currentQuestion.currentQuestion ===
+				ind + 1
 					? 'bg-white text-[#3f55b7]'
 					: null}"
 				onclick={() => {
-					selected = ind;
+					currentQuestion.currentQuestion = ind + 1;
 				}}>{ind + 1}</button
 			>
 		</li>

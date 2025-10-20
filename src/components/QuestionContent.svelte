@@ -1,9 +1,16 @@
 <script>
 	let { question } = $props();
-	let isSelected = $state(1);
+	let isSelected = $state(null);
 </script>
 
-<div class="bg-base-200 rounded-3xl center gap-3 flex flex-col p-10 font-semibold">
+<div
+	class="bg-base-200 rounded-3xl center gap-3 flex flex-col p-10 font-semibold min-w-80 mx-1"
+	style="transform: translate3d(
+      calc((var(--current-slide-index) - 1) * -20.5rem), 
+      0, 
+      0
+    ); transition: transform 0.3s ease-in-out;"
+>
 	<div class="self-start">{question.id}.</div>
 	<div>
 		{question.question}

@@ -3,6 +3,7 @@
 	import QuestionNums from './QuestionNums.svelte';
 	import Timer from './Timer.svelte';
 
+	let currentQuestion = $state(1);
 	const questions = [
 		{
 			id: 1,
@@ -41,15 +42,30 @@
 <input type="checkbox" id="my_modal_4" class="modal-toggle" />
 <div class="modal" role="dialog">
 	<main
-		class="modal-box flex flex-col items-center gap-8 max-w-none w-full h-full rounded-none bg-[#3f55b7]"
+		class="modal-box flex flex-col overflow-x-hidden items-center justify-center gap-8 max-w-none w-full h-full rounded-none bg-[#3f55b7]"
 	>
 		<label for="my_modal_4" class="btn btn-circle w-6 h-6 absolute top-3 right-3">X</label>
 		<Timer />
-		<QuestionNums {questions} />
-		<div class="flex">
-			{#each questions as question, ind}
-				<QuestionContent question={{ ...question }} />
-			{/each}
+		<QuestionNums
+			{questions}
+			currentQuestion={{
+				get currentQuestion() {
+					return currentQuestion;
+				},
+				set currentQuestion(val) {
+					currentQuestion = val;
+				}
+			}}
+		/>
+		<div class="center w-fit">
+			<div
+				class="flex w-90 px-4 overflow-x-hidden self-start slider"
+				style={`--current-slide-index: ${currentQuestion};`}
+			>
+				{#each questions as question}
+					<QuestionContent question={{ ...question, currentQuestion }} />
+				{/each}
+			</div>
 		</div>
 	</main>
 </div>
