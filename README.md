@@ -4,7 +4,7 @@ This is a web application for a course page, built with Svelte and Tailwind CSS.
 
 ## Description
 
-This project is a course page that includes features like a video player, course content, a quiz, a comments section, and a leaderboard. It seems to be designed to provide an interactive learning experience for students.
+This project is a course page that includes features like a video player, course content, a quiz, a comments section, and a leaderboard. It is designed to provide an interactive learning experience for students.
 
 ## Features
 
