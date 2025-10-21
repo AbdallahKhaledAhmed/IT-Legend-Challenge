@@ -1,43 +1,54 @@
-# Svelte + Vite
+# ITLegend Course Page
 
-This template should help get you started developing with Svelte in Vite.
+This is a web application for a course page, built with Svelte and Tailwind CSS.
 
-## Recommended IDE Setup
+## Description
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+This project is a course page that includes features like a video player, course content, a quiz, a comments section, and a leaderboard. It seems to be designed to provide an interactive learning experience for students.
 
-## Need an official Svelte framework?
+## Features
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+*   **Video Player:** For watching course videos.
+*   **Course Content:** Organized into weeks.
+*   **Quizz:** To test knowledge.
+*   **Comments Section:** For discussions.
+*   **Leaderboard:** To track progress and compete with others.
+*   **PDF Viewer:** For viewing course materials.
+*   **Responsive Design:** The use of Tailwind CSS suggests that the application is designed to work on different screen sizes.
 
-## Technical considerations
+## Technologies Used
 
-**Why use this over SvelteKit?**
+*   **[Svelte](https://svelte.dev/):** A modern JavaScript compiler that allows you to write easy-to-understand JavaScript code that's then compiled to highly efficient, imperative code that runs in the browser.
+*   **[Vite](https://vitejs.dev/):** A fast build tool that provides a quicker and leaner development experience for modern web projects.
+*   **[Tailwind CSS](https://tailwindcss.com/):** A utility-first CSS framework for rapidly building custom user interfaces.
+*   **[daisyUI](https://daisyui.com/):** A component library for Tailwind CSS.
+*   **[Video.js](https://videojs.com/):** A web video player.
+*   **[Iconify](https://iconify.design/):** A library for using icons from various icon sets.
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+## Getting Started
 
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+To get a local copy up and running, follow these simple steps.
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+### Prerequisites
 
-**Why include `.vscode/extensions.json`?**
+*   [Node.js](https://nodejs.org/en/) installed on your machine.
+*   [pnpm](https://pnpm.io/) package manager.
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+### Installation
 
-**Why enable `checkJs` in the JS template?**
+1.  Clone the repo:
+    ```sh
+    https://github.com/AbdallahKhaledAhmed/IT-Legend-Challenge.git
+    ```
+2.  Install NPM packages:
+    ```sh
+    pnpm install
+    ```
+3.  Start the development server:
+    ```sh
+    pnpm run dev
+    ```
 
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
+## License
 
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/sveltejs/svelte-hmr/tree/master/packages/svelte-hmr#preservation-of-local-state).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
+Distributed under the MIT License. See `LICENSE` for more information.
