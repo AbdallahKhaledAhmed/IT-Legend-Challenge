@@ -14,7 +14,7 @@ This project is a course page that includes features like a video player, course
 *   **Comments Section:** For discussions.
 *   **Leaderboard:** To track progress and compete with others.
 *   **PDF Viewer:** For viewing course materials.
-*   **Responsive Design:** The use of Tailwind CSS suggests that the application is designed to work on different screen sizes.
+*   **Responsive Design:** the application is designed to work on different screen sizes.
 
 ## Technologies Used
 
