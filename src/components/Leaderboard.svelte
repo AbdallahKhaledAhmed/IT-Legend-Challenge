@@ -1,7 +1,7 @@
 <input type="checkbox" id="my_modal_2" class="modal-toggle" title="Leaderboard" />
 <div class="modal" role="dialog">
 	<div
-		class="modal-box max-w-none w-full h-full rounded-none flex justify-start items-center flex-col gap-5 text-blue-700"
+		class="modal-box overflow-x-hidden max-w-none w-full h-full rounded-none flex justify-start items-center flex-col gap-5 text-blue-700"
 	>
 		<label for="my_modal_2" class="btn btn-circle w-6 h-6 absolute top-3 right-3">X</label>
 		<header class="center flex-col">
@@ -20,9 +20,9 @@
 			</blockquote>
 		</figure>
 		<main
-			class="bg-base-200 w-full sm:w-100 overflow-x-hidden rounded-3xl center gap-3 flex-col p-10"
+			class="bg-base-200 w-full h-fit sm:w-100 rounded-3xl center gap-3 flex-col p-10"
 		>
-			<div class="w-full h-20 bg-base-100 border-yellow-300 border-2 rounded center text-sm">
+			<div class="w-full h-20 bg-base-100  border-yellow-300 border-2 rounded center text-sm">
 				<div dir="rtl" class="center flex-col">
 					<strong class="font-semibold text-xl">Abdallah Khaled</strong><span class="text-xsm"
 						>(كاره النقاشة والنقاشين الي مش فاهمين)</span
