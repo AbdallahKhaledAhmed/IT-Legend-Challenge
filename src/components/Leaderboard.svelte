@@ -23,18 +23,18 @@
 			</blockquote>
 		</figure>
 		<main class="bg-base-200 rounded-3xl center gap-3 flex-col p-10">
-			<div class="w-80 h-20 bg-white border-yellow-300 border-2 rounded center text-sm">
+			<div class="w-80 h-20 bg-base-100 border-yellow-300 border-2 rounded center text-sm">
 				<div dir="rtl" class="center flex-col">
 					<strong class="font-semibold text-xl">Abdallah Khaled</strong><span class="text-xsm"
 						>(كاره النقاشة والنقاشين الي مش فاهمين)</span
 					>
 				</div>
 			</div>
-			<div class="w-80 h-20 bg-white border-amber-500 border-2 rounded"></div>
-			<div class="w-80 h-20 bg-white border-amber-500 border-2 rounded"></div>
-			<div class="w-80 h-20 bg-white border-gray-300 border-2 rounded"></div>
-			<div class="w-80 h-20 bg-white border-gray-300 border-2 rounded"></div>
-			<div class="w-80 h-20 bg-white border-gray-300 border-2 rounded"></div>
+			<div class="w-80 h-20 bg-base-100 border-amber-500 border-2 rounded"></div>
+			<div class="w-80 h-20 bg-base-100 border-amber-500 border-2 rounded"></div>
+			<div class="w-80 h-20 bg-base-100 border-gray-300 border-2 rounded"></div>
+			<div class="w-80 h-20 bg-base-100 border-gray-300 border-2 rounded"></div>
+			<div class="w-80 h-20 bg-base-100 border-gray-300 border-2 rounded"></div>
 		</main>
 	</div>
 </div>

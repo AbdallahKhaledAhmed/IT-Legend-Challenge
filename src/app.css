@@ -5,7 +5,7 @@
 @plugin "daisyui" {
 	themes:
 		light --default,
-		dark;
+		dim;
 }
 
 @layer utilities {

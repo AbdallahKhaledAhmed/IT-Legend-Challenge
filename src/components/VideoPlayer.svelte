@@ -18,15 +18,6 @@
 			fluid: true,
 			playbackRates: [0.5, 0.75, 1, 1.25, 1.5, 2]
 		});
-		// @ts-ignore
-		player.landscapeFullscreen({
-			fullscreen: {
-				enterOnRotate: true,
-				exitOnRotate: true,
-				alwaysInLandscapeMode: true,
-				iOS: true
-			}
-		});
 		videoElement.addEventListener('ended', () => {
 			videoIndex.data++;
 		});
