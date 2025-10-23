@@ -65,7 +65,7 @@
 </header>
 <main class="flex flex-wrap max-md:gap-5 p-2 md:p-5">
 	<div class="{theaterStatus ? 'contents' : 'w-2/3'} max-md:contents">
-		<div class="w-full max-md:sticky top-0 z-100 md:pr-5">
+		<div class="w-full max-md:sticky top-0 z-100 {!theaterStatus ? 'md:pr-5' : ''}">
 			{#key videoIndex}
 				<VideoPlayer {...videoData[videoIndex % 2]} />
 			{/key}
