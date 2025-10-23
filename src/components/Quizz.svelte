@@ -120,7 +120,7 @@
 		{/if}
 	</main>
 </div>
-<div id="toast" class="toast toast-top toast-right hidden z-[100]">
+<div id="toast" class="toast toast-top toast-right hidden z-[110]">
 	<div class={`alert ${toastClass}`}>
 		<span class="text-white font-semibold">{toastMessage}</span>
 	</div>
