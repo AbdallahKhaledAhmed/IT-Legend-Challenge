@@ -22,7 +22,7 @@
 
 	let videoIndex = $state(0);
 	let quizzTime = $state(-1);
-	let theaterMode = $state(true);
+	let theaterMode = $state(false);
 	let theaterStatus = $derived.by(() => (underMedium.current ? false : theaterMode));
 	setContext('theaterMode', {
 		get status() {
@@ -64,20 +64,18 @@
 	<h1 class="text-4xl font-semibold">Starting SEO as your Home</h1>
 </header>
 <main class="flex flex-wrap max-md:gap-5 p-2 md:p-5">
-	<div class="{theaterStatus ? '' : 'contents'} w-full md:w-2/3">
-		<div class="w-full max-md:sticky top-0 z-100">
+	<div class="{theaterStatus ? 'contents' : 'w-2/3'} max-md:contents">
+		<div class="w-full max-md:sticky top-0 z-100 md:pr-5">
 			{#key videoIndex}
 				<VideoPlayer {...videoData[videoIndex % 2]} />
 			{/key}
 		</div>
-		<div class={theaterStatus || underMedium.current ? 'contents' : 'w-2/3'}>
-			<div class="md:pr-5 max-md:contents flex flex-col gap-5">
-				<Navigation />
-				<CourseMaterial on:startQuizz={() => (isQuizzOpen = true)} />
-				{#if !underMedium.current}
-					<Comments />
-				{/if}
-			</div>
+		<div class="{theaterStatus ? 'w-2/3' : 'w-full'} md:pr-5 flex flex-col gap-5">
+			<Navigation />
+			<CourseMaterial on:startQuizz={() => (isQuizzOpen = true)} />
+			{#if !underMedium.current}
+				<Comments />
+			{/if}
 		</div>
 	</div>
 	<div class="w-full md:w-1/3 flex flex-col gap-5 px-2 pt-10 md:pt-2 md:pl-5" id="Curriculm">
@@ -88,7 +86,7 @@
 		<Week weekTitle="Components & Databinding" weekNum="5-8" weekContent={week5_8} />
 	</div>
 	{#if underMedium.current}
-		<div class="pr-5">
+		<div class="px-1">
 			<Comments />
 		</div>
 	{/if}
