@@ -13,10 +13,10 @@
 	];
 </script>
 
-<div class="flex flex-col gap-5">
+<div class="flex flex-col gap-5 w-full">
 	<h2 class="card-title text-3xl">Course Materials</h2>
 	<div class="card shadow-2xl">
-		<div class="flex flex-col sm:flex-row justify-around items-center p-6 sm:gap-15">
+		<div class="flex flex-col sm:flex-row justify-around items-center p-6 sm:gap-15 w-full">
 			<DataCollection {data} />
 			<DataCollection {data} />
 		</div>

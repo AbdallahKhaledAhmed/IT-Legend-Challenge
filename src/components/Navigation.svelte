@@ -2,7 +2,7 @@
 	import ModalButton from './ModalButton.svelte';
 </script>
 
-<ul class="menu menu-horizontal gap-3 rounded-box [&>li>*]:border-[#bebdbd] opacity-80">
+<ul class="menu menu-horizontal w-full gap-3 rounded-box [&>li>*]:border-[#bebdbd] opacity-80">
 	<li>
 		<a title="Comments" class="btn btn-ghost btn-circle" href="#Comments"
 			><span class="icon-[mdi--comment-text-outline]" style="width: 24px; height: 24px;"></span></a

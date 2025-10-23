@@ -24,7 +24,7 @@
 <div id="progress-label" class="hidden">Your Course Progress</div>
 
 <div
-	class="[&_*]:border-[#bebdbd] progress-bar rounded h-2 w-full bg-base-300 flex justify-start"
+	class="[&_*]:border-[#bebdbd] progress-bar my-5 rounded h-2 w-full bg-base-300 flex justify-start"
 	role="progressbar"
 	aria-labelledby="progress-label"
 	aria-valuenow={value}

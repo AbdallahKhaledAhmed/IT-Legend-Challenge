@@ -2,10 +2,8 @@
 	import { getContext, onMount } from 'svelte';
 	import videojs from 'video.js';
 	import 'video.js/dist/video-js.css';
-	import LandscapeFullscreen from 'videojs-landscape-fullscreen';
+	import 'videojs-landscape-fullscreen';
 	import TheaterMode from './TheaterMode.svelte';
-
-	videojs.registerPlugin('landscapeFullscreen', LandscapeFullscreen);
 
 	let { vidPath, thumbPath } = $props();
 	let playing = $state(false);
@@ -17,6 +15,15 @@
 			controls: true,
 			fluid: true,
 			playbackRates: [0.5, 0.75, 1, 1.25, 1.5, 2]
+		});
+		// @ts-ignore
+		player.landscapeFullscreen({
+			fullscreen: {
+				enterOnRotate: true,
+				exitOnRotate: true,
+				alwaysInLandscapeMode: true,
+				iOS: true
+			}
 		});
 		videoElement.addEventListener('ended', () => {
 			videoIndex.data++;

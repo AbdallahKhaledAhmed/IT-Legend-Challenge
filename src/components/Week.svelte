@@ -7,7 +7,7 @@
 </script>
 
 <div
-	class="collapse collapse-plus bg-base-100 border-base-300 rounded md:rounded-none border md:py-7 md:px-2 my-5"
+	class="collapse collapse-plus bg-base-100 border-base-300 rounded md:rounded-none border md:py-7 md:px-2"
 >
 	<input type="checkbox" id="Collapse" class="md:hidden" checked={medium.current ? true : false} />
 	<label for="Collapse" class="collapse-title font-semibold md:hidden">{weekTitle}</label>

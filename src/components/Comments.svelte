@@ -39,7 +39,7 @@
 	}
 </script>
 
-<div class="flex flex-col">
+<div class="flex flex-col w-full">
 	<h2 class="card-title text-3xl" id="Comments">Comments</h2>
 	<div>
 		{#each comments as comment}
