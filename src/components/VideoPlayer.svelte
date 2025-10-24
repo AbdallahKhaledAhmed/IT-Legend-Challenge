@@ -42,12 +42,11 @@
 		<TheaterMode />
 	{/if}
 	<!-- svelte-ignore a11y_media_has_caption -->
-	<video bind:this={videoElement} class="video-js" preload="none"></video>
-	<img src={thumbPath} alt="thumbnail" class="absolute w-full h-full top-0" loading="lazy" />
+	<video poster={thumbPath} bind:this={videoElement} class="video-js" preload="none"></video>
 	<button
 		title="Play"
 		id="Play"
-		class="w-full h-full top-0 absolute center rounded bg-black/40 bg-cover bg-no-repeat"
+		class="w-full h-full top-0 absolute center rounded bg-black/40"
 		style:display={playing ? 'none' : null}
 		onclick={() => {
 			playing = true;
