@@ -19,7 +19,7 @@
 	}}
 >
 	<div class="flex items-center gap-2 text-start">
-		<span class="icon-[formkit--filedoc]" style="width: 20px; height: 20px;"></span>
+		<span class="icon-[formkit--filedoc] shrink-0" style="width: 20px; height: 20px;"></span>
 		<span>{name}</span>
 	</div>
 	{#if questions || time}
@@ -30,6 +30,6 @@
 			<span class="text-sm text-rose-700 bg-[#fdf2f4] px-2 rounded">{time || 0} MINUTES</span>
 		</div>
 	{:else}
-		<span class="icon-[icon-park-outline--lock-one]" style="width: 20px; height: 20px"></span>
+		<span class="icon-[icon-park-outline--lock-one] shrink-0" style="width: 20px; height: 20px"></span>
 	{/if}
 </ModalButton>
