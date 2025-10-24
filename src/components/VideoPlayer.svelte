@@ -43,11 +43,10 @@
 	{/if}
 	<!-- svelte-ignore a11y_media_has_caption -->
 	<video
-		src={vidPath}
 		poster={thumbPath}
 		bind:this={videoElement}
 		class="video-js"
-		style:border-radius="var(--radius-lg)"
+		preload="none"
 	></video>
 	<button
 		title="Play"
@@ -56,6 +55,7 @@
 		style:display={playing ? 'none' : null}
 		onclick={() => {
 			playing = true;
+			videoElement.src = vidPath;
 			videoElement.play();
 		}}
 	>
